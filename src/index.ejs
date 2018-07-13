@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>clone-hero-download-manager</title>
+    <title>Clone Hero Download Manager</title>
+    <link rel="stylesheet" href="../static/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/material-icons.css">
     <% if (htmlWebpackPlugin.options.nodeModules) { %>
       <!-- Add `node_modules/` to global paths so `require` works properly in development -->
       <script>
@@ -13,6 +15,8 @@
   <body>
     <div id="app"></div>
     <!-- Set `__static` path to static files in production -->
+    <script src="../static/js/materialize.min.js"></script>
+    <script src="../static/js/moment.js"></script>
     <script>
       if (process.env.NODE_ENV !== 'development') window.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
     </script>
